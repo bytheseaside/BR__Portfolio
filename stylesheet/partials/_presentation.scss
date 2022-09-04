@@ -1,0 +1,58 @@
+.presentation {
+  width: 100vw;
+  height: 85vh;
+
+  &__pic {
+    display: none;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding-left: 15px;
+  }
+
+  &__heading {
+    margin: 40px auto 10px auto;
+    width: 50%;
+    font-size: 48px; /*overwrite inherited font size*/
+    text-align: center;
+  }
+
+  &__role {
+    margin-bottom: 20px;
+  }
+}
+
+/*Contact buttons section*/
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+
+  &__item {
+    width: auto;
+    height: 100%;
+    padding: 10px 8px;
+    margin: 10px auto;
+    font-size: 18px;
+    @extend %button;
+    &:hover {
+      @extend %buttonOnHover;
+    }
+
+    &:active {
+      @extend %buttonActive;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    padding-left: 5px;
+  }
+}

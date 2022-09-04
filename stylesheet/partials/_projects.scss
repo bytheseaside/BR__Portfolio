@@ -1,0 +1,64 @@
+.projects {
+  margin: auto;
+  padding: 100px 10px;
+  width: 75%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__heading {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  &__text {
+    text-align: justify;
+    padding-bottom: 20px;
+  }
+}
+
+.website-cards {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 310px;
+    height: 150px;
+    margin: 10px 0;
+    padding: 50px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+
+    &:nth-child(3n) {
+      background-color: $green;
+      background: linear-gradient(0deg, white 0%, $green 100%);
+    }
+    &:nth-child(3n + 1) {
+      background-color: $purple;
+      background: linear-gradient(0deg, white 0%, $purple 100%);
+    }
+    &:nth-child(3n + 2) {
+      background-color: $pink;
+      background: linear-gradient(0deg, white 0%, $pink 100%);
+    }
+  }
+
+  &__logo {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

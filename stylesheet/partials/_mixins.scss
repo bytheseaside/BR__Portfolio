@@ -1,0 +1,16 @@
+// body wrapper
+@mixin desktopViewBodyWrappers($bodyClass, $mainClass) {
+  .#{$mainClass} {
+    min-height: 85vh;
+    grid-area: #{$mainClass};
+  }
+
+  .#{$bodyClass} {
+    display: grid;
+    grid-template-columns: 25vw 75vw;
+    grid-template-rows: auto 15vh;
+    grid-template-areas:
+      "nav #{$mainClass}"
+      "nav footer";
+  }
+}

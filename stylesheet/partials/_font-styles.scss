@@ -1,0 +1,24 @@
+.heading {
+  font-size: 40px;
+  color: $dark-gray;
+}
+.subheading {
+  font-size: 24px;
+  color: $gray;
+}
+.text {
+  font-size: 20px;
+  color: $dark-gray;
+}
+
+// agregue el map en la tarea solo porque lo pide, luego de la correccion
+// voy a borrarlo y volver a usar simplemente las variables para esta seccion
+.B {
+  color: map-get($spanColors, bColor);
+}
+.R {
+  color: map-get($map: $spanColors, $key: rColor);
+}
+.always-span {
+  color: map-get($map: $spanColors, $key: alwaysColor);
+}

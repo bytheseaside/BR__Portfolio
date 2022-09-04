@@ -1,0 +1,278 @@
+/* Media queries for index*/
+@media (min-width: 768px) {
+  @include desktopViewBodyWrappers(index-body, presentation);
+  .presentation {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-content {
+      width: auto;
+      height: 100%;
+    }
+
+    &__heading {
+      text-align: start;
+      font-size: 60px;
+      width: auto;
+    }
+
+    &__role {
+      align-self: flex-start;
+      font-size: 30px;
+      width: auto;
+    }
+    &__pic {
+      grid-area: image;
+      display: flex;
+      width: 300px !important;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &:hover {
+        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+    }
+  }
+
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  /*Contact buttons section*/
+  .contact-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-self: flex-start;
+    width: auto;
+
+    &__item {
+      height: auto;
+      align-items: center;
+      text-align: center;
+      margin-right: 20px;
+      font-size: 20px;
+    }
+    &__icon {
+      width: 22px;
+      height: 22px;
+      padding-left: 5px;
+      color: $gray !important;
+    }
+  }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+  .presentation__pic,
+  .presentation__img {
+    display: none;
+  }
+  .presentation-content {
+    margin: 50%;
+    width: 100%;
+  }
+}
+
+/* Media queries for nav bar  layout in general */
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  /*Navbar*/
+  .aside {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    grid-area: nav;
+    background-color: $green;
+  }
+  .nav-bar {
+    margin-left: 10px;
+
+    &__item {
+      margin-left: 0;
+      text-align: left;
+
+      &:hover {
+        font-size: 105%;
+        text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
+/* Media queries for footer*/
+@media (min-width: 768px) {
+  .footer {
+    width: 100%;
+    grid-area: footer;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #d9d9d9;
+
+    &__text {
+      width: auto;
+      background-color: inherit;
+    }
+  }
+
+  .social-media {
+    width: auto;
+
+    &__item {
+      height: 80%;
+    }
+  }
+}
+
+/* Media queries for about page*/
+@media (min-width: 768px) {
+  @include desktopViewBodyWrappers(about-body, about-me);
+
+  .about-body {
+    height: auto;
+  }
+
+  .about-me {
+    width: 90%;
+    height: 100%;
+    min-height: 85vh;
+    margin: 10px auto;
+    padding: 10px 5px;
+
+    &__heading {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+
+  .tech {
+    width: 75%;
+    align-self: center;
+    padding-bottom: 5px;
+
+    &__img {
+      width: 100px;
+      height: auto;
+      margin: 5px;
+    }
+  }
+}
+
+/*Media queries for projects*/
+@media (min-width: 768px) {
+  @include desktopViewBodyWrappers(projects-body, projects);
+
+  .website-cards {
+    width: 100%;
+
+    &__card {
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 264px;
+      height: 320px;
+      margin: 10px 10px;
+      padding: 50px 5px;
+    }
+
+    &__logo {
+      height: 130px;
+      width: 130px;
+      margin-right: 0;
+    }
+  }
+}
+
+/*Media queries for collab*/
+@media (min-width: 768px) {
+  @include desktopViewBodyWrappers(collab-body, collaborate);
+  .collaborate {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+
+    &__heading {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+
+  .collaborate__list {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  .collaborate__pic {
+    height: auto;
+    width: 400px;
+    max-width: 40%;
+    padding-bottom: 10px;
+  }
+  .collaborate__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/*Media queries for contact*/
+@media (min-width: 768px) {
+  @include desktopViewBodyWrappers(contact-body, contact-form);
+
+  .contact-form {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    padding: 5px;
+
+    &__heading {
+      font-size: 50px;
+    }
+    &__form {
+      max-width: 400px;
+      min-width: 70%;
+    }
+    &__label {
+      font-size: 20px;
+      color: #4d4d4d;
+    }
+    &__input {
+      font-size: 20px;
+    }
+  }
+}

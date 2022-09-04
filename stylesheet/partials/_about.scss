@@ -1,0 +1,37 @@
+.about-me {
+  margin: 0 auto 20px auto;
+  padding: 100px 10px;
+  width: 75%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__heading {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    text-align: justify;
+    padding-bottom: 20px;
+  }
+}
+
+.tech {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 5px;
+
+  &__img {
+    width: 60px;
+    height: auto;
+    margin: 5px;
+
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.1);
+    }
+  }
+}

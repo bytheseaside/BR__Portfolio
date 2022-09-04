@@ -1,0 +1,33 @@
+{
+  "name": "br__portfolio",
+  "version": "1.0.0",
+  "description": "Trabajo final  - coderhouse -  diseño web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass ./stylesheet/styles.scss:./stylesheet/styles.css",
+    "start": "sass ./stylesheet/styles.scss:./stylesheet/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bytheseaside/BR__Portfolio.git"
+  },
+  "keywords": [
+    "coderhouse",
+    "trabajofinal",
+    "BRdev",
+    "portfolio",
+    "front end"
+  ],
+  "author": "Brisa Rojas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bytheseaside/BR__Portfolio/issues"
+  },
+  "homepage": "https://github.com/bytheseaside/BR__Portfolio#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.5"
+  }
+}
