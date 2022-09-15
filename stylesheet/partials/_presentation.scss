@@ -48,8 +48,14 @@
     &:active {
       @extend %buttonActive;
     }
+
   }
 
+  &__text{
+    margin: auto;
+  }
+
+  
   &__icon {
     width: 22px;
     height: 22px;

@@ -154,6 +154,9 @@ body {
   margin: 10px auto;
   font-size: 18px;
 }
+.contact-buttons__text {
+  margin: auto;
+}
 .contact-buttons__icon {
   width: 22px;
   height: 22px;
