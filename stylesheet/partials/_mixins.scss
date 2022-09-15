@@ -8,7 +8,7 @@
   .#{$bodyClass} {
     display: grid;
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: auto 15vh;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "nav #{$mainClass}"
       "nav footer";

@@ -11,8 +11,6 @@
   color: $dark-gray;
 }
 
-// agregue el map en la tarea solo porque lo pide, luego de la correccion
-// voy a borrarlo y volver a usar simplemente las variables para esta seccion
 .B {
   color: map-get($spanColors, bColor);
 }
