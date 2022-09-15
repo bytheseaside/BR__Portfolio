@@ -18,15 +18,14 @@
 
     &__heading {
       text-align: start;
-      font-size: 60px;
       width: auto;
     }
 
     &__role {
       align-self: flex-start;
-      font-size: 30px;
       width: auto;
     }
+
     &__pic {
       grid-area: image;
       display: flex;
@@ -82,8 +81,12 @@
       align-items: center;
       text-align: center;
       margin-right: 20px;
-      font-size: 20px;
     }
+
+    &__text {
+      font-size: 24px;
+    }
+
     &__icon {
       width: 22px;
       height: 22px;
@@ -126,6 +129,7 @@
 
       &:hover {
         font-size: 105%;
+        color: inherit;
         text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
       }
     }
@@ -136,30 +140,13 @@
 @media (min-width: 768px) {
   @include desktopViewBodyWrappers(about-body, about-me);
 
-  .about-body {
-    height: auto;
-  }
-
   .about-me {
-    width: 90%;
-    height: 100%;
-    min-height: 85vh;
-    margin: 10px auto;
-    padding: 10px 5px;
-
-    &__heading {
-      font-size: 40px;
-    }
-    &__text {
-      font-size: 20px;
-    }
+    @include centerAndGiveWidth($margin-top: 0, $margin-bottom: 0);
   }
 
   .tech {
     width: 75%;
-    align-self: center;
-    padding-bottom: 5px;
-
+    @include centerAndGiveWidth($width: 75%, $margin-top: 0, $margin-bottom: 0);
     &__img {
       width: 100px;
       height: auto;
@@ -172,16 +159,18 @@
 @media (min-width: 768px) {
   @include desktopViewBodyWrappers(projects-body, projects);
 
+  .projects {
+    @include centerAndGiveWidth($margin-top: 0, $margin-bottom: 0);
+  }
+
   .website-cards {
     width: 100%;
 
     &__card {
       flex-direction: column;
       justify-content: space-evenly;
-      width: 264px;
+      @include centerAndGiveWidth($width: 264px, $margin-top: 10px, $margin-bottom: 10px);
       height: 320px;
-      margin: 10px 10px;
-      padding: 50px 5px;
     }
 
     &__logo {
@@ -195,11 +184,9 @@
 /*Media queries for collab*/
 @media (min-width: 768px) {
   @include desktopViewBodyWrappers(collab-body, collaborate);
+  
   .collaborate {
-    width: 90%;
-    height: auto;
-    margin: 10px auto;
-    padding: 10px;
+    @include centerAndGiveWidth($margin-top: 0, $margin-bottom: 0);
 
     &__heading {
       font-size: 40px;
@@ -213,12 +200,16 @@
     padding-left: 20px;
     padding-bottom: 10px;
   }
+
   .collaborate__pic {
+    display: flex;
     height: auto;
     width: 400px;
+    margin-left: 15px;
     max-width: 40%;
     padding-bottom: 10px;
   }
+
   .collaborate__img {
     width: 100%;
     height: 100%;
@@ -231,24 +222,19 @@
   @include desktopViewBodyWrappers(contact-body, contact-form);
 
   .contact-form {
-    width: 90%;
-    height: auto;
-    margin: 10px auto;
-    padding: 5px;
+    @include centerAndGiveWidth($margin-top: 0, $margin-bottom: 0);
 
-    &__heading {
-      font-size: 50px;
-    }
     &__form {
       max-width: 400px;
       min-width: 70%;
     }
+    
     &__label {
-      font-size: 20px;
       color: #4d4d4d;
     }
+
     &__input {
-      font-size: 20px;
+      padding: 0 20px;
     }
   }
 }

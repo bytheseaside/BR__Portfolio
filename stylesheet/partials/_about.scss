@@ -1,21 +1,11 @@
 .about-me {
-  margin: 0 auto 20px auto;
-  padding: 100px 10px;
+  margin: 0 auto;
+  padding: 100px 0;
   width: 75%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-  &__heading {
-    text-align: center;
-    padding-bottom: 20px;
-  }
-
-  &__text {
-    text-align: justify;
-    padding-bottom: 20px;
-  }
 }
 
 .tech {

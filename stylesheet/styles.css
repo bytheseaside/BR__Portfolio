@@ -35,16 +35,19 @@ body {
 .heading {
   font-size: 40px;
   color: #4d4d4d;
+  text-align: center;
 }
 
 .subheading {
   font-size: 24px;
   color: #cccccc;
+  text-align: left;
 }
 
 .text {
   font-size: 20px;
   color: #4d4d4d;
+  text-align: justify;
 }
 
 .B {
@@ -115,10 +118,6 @@ body {
   font-weight: bolder;
 }
 
-.presentation {
-  width: 100vw;
-  height: 85vh;
-}
 .presentation__pic {
   display: none;
 }
@@ -164,21 +163,13 @@ body {
 }
 
 .about-me {
-  margin: 0 auto 20px auto;
-  padding: 100px 10px;
+  margin: 0 auto;
+  padding: 100px 0;
   width: 75%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.about-me__heading {
-  text-align: center;
-  padding-bottom: 20px;
-}
-.about-me__text {
-  text-align: justify;
-  padding-bottom: 20px;
 }
 
 .tech {
@@ -205,14 +196,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.projects__heading {
-  text-align: center;
-  padding-bottom: 20px;
-}
-.projects__text {
-  text-align: justify;
-  padding-bottom: 20px;
 }
 
 .website-cards {
@@ -291,9 +274,7 @@ body {
 }
 
 .collaborate__pic {
-  width: 100px;
-  max-width: 60%;
-  padding-bottom: 20px;
+  display: none;
 }
 
 .collaborate__img {
@@ -363,7 +344,7 @@ body {
   .index-body {
     display: grid;
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: "nav presentation" "nav footer";
   }
   .presentation {
@@ -381,12 +362,10 @@ body {
   }
   .presentation__heading {
     text-align: start;
-    font-size: 60px;
     width: auto;
   }
   .presentation__role {
     align-self: flex-start;
-    font-size: 30px;
     width: auto;
   }
   .presentation__pic {
@@ -432,7 +411,9 @@ body {
     align-items: center;
     text-align: center;
     margin-right: 20px;
-    font-size: 20px;
+  }
+  .contact-buttons__text {
+    font-size: 24px;
   }
   .contact-buttons__icon {
     width: 22px;
@@ -473,6 +454,7 @@ body {
   }
   .nav-bar__item:hover {
     font-size: 105%;
+    color: inherit;
     text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
   }
 }
@@ -485,29 +467,19 @@ body {
   .about-body {
     display: grid;
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: "nav about-me" "nav footer";
-  }
-  .about-body {
-    height: auto;
   }
   .about-me {
     width: 90%;
-    height: 100%;
-    min-height: 85vh;
-    margin: 10px auto;
-    padding: 10px 5px;
-  }
-  .about-me__heading {
-    font-size: 40px;
-  }
-  .about-me__text {
-    font-size: 20px;
+    padding: 30px 0;
+    margin: 0 auto 0 auto;
   }
   .tech {
     width: 75%;
-    align-self: center;
-    padding-bottom: 5px;
+    width: 75%;
+    padding: 30px 0;
+    margin: 0 auto 0 auto;
   }
   .tech__img {
     width: 100px;
@@ -524,8 +496,13 @@ body {
   .projects-body {
     display: grid;
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: "nav projects" "nav footer";
+  }
+  .projects {
+    width: 90%;
+    padding: 30px 0;
+    margin: 0 auto 0 auto;
   }
   .website-cards {
     width: 100%;
@@ -534,9 +511,9 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     width: 264px;
+    padding: 30px 0;
+    margin: 10px auto 10px auto;
     height: 320px;
-    margin: 10px 10px;
-    padding: 50px 5px;
   }
   .website-cards__logo {
     height: 130px;
@@ -553,14 +530,13 @@ body {
   .collab-body {
     display: grid;
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: "nav collaborate" "nav footer";
   }
   .collaborate {
     width: 90%;
-    height: auto;
-    margin: 10px auto;
-    padding: 10px;
+    padding: 30px 0;
+    margin: 0 auto 0 auto;
   }
   .collaborate__heading {
     font-size: 40px;
@@ -573,8 +549,10 @@ body {
     padding-bottom: 10px;
   }
   .collaborate__pic {
+    display: flex;
     height: auto;
     width: 400px;
+    margin-left: 15px;
     max-width: 40%;
     padding-bottom: 10px;
   }
@@ -593,28 +571,23 @@ body {
   .contact-body {
     display: grid;
     grid-template-columns: 25vw 75vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: "nav contact-form" "nav footer";
   }
   .contact-form {
     width: 90%;
-    height: auto;
-    margin: 10px auto;
-    padding: 5px;
-  }
-  .contact-form__heading {
-    font-size: 50px;
+    padding: 30px 0;
+    margin: 0 auto 0 auto;
   }
   .contact-form__form {
     max-width: 400px;
     min-width: 70%;
   }
   .contact-form__label {
-    font-size: 20px;
     color: #4d4d4d;
   }
   .contact-form__input {
-    font-size: 20px;
+    padding: 0 20px;
   }
 }
 
