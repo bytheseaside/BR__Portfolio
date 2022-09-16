@@ -15,7 +15,7 @@
   }
 }
 
-@mixin centerAndGiveWidth($width:90%, $margin-top, $margin-bottom) {
+@mixin centerAndGiveWidth($width:75%, $margin-top, $margin-bottom) {
   width: $width;
   padding: 30px 0;
   margin: $margin-top auto $margin-bottom auto;
